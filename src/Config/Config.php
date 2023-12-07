@@ -57,6 +57,10 @@ class Config extends AbstractConfigData
 	 */
 	public static function getProjectVersion(): string
 	{
+		if (isset($_ENV['TEST']) && $_ENV['TEST'] === '1') {
+			return '1.0.0';
+		}
+
 		if (!\function_exists('get_plugin_data')) {
 			require_once(\ABSPATH . 'wp-admin/includes/plugin.php');
 		}
