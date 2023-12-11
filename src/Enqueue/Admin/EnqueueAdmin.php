@@ -73,7 +73,8 @@ class EnqueueAdmin extends AbstractEnqueueAdmin
 	/**
 	 * Enqueue scripts from AbstractEnqueueBlocks, extended to expose additional data. Only admin.
 	 *
-	 * @param string $hook
+	 * @param string $hook Hook name.
+	 *
 	 * @return void
 	 */
 	public function enqueueScripts(string $hook): void
